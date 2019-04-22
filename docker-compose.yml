@@ -1,0 +1,63 @@
+version: '3.7'
+
+services:
+  mongo:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    networks:
+      - db
+
+  server:
+    build:
+      context: ./server/
+      dockerfile: ../docker/Dockerfile.server.dev
+    image: todo-server-space-cloud
+    restart: always
+    depends_on:
+      - mongo
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: example
+    volumes: # For webpack dev server to use our local files
+      - ./web:/usr/src/app
+    networks:
+      - api
+      - db
+
+  web:
+    build:
+      context: ./web/
+      dockerfile: ../docker/Dockerfile.web.dev
+    image: todo-web-space-cloud
+    depends_on:
+      - server
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
+    volumes: # For webpack dev server to use our local files
+      - ./web:/usr/src/app
+    networks:
+      - api
+
+  haproxy:
+    build:
+      context: ./HAProxy/.
+      dockerfile: ../docker/Dockerfile.HAProxy.dev
+    image: todo-haproxy-space-cloud
+    networks:
+      - api
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+      - web
+
+networks:
+  db:
+  api:
+
+volumes:
+  db-data:

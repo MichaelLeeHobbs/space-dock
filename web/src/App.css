@@ -1,0 +1,281 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url('images/bg-01.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.login-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.login-card {
+  width: 25%;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 55px 55px 37px 55px;
+  background: #9152f8;
+  background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-form-title {
+  font-size: 30px;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  margin: 5%;
+}
+
+.login-wrap-input {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+  margin-bottom: 30px;
+}
+
+.login-form-input {
+  font-size: 16px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 48px;
+  background: transparent;
+  margin: 0px;
+  padding-left: 48px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+input {
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.login-focus-input {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.login-form-input::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.container-login-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login-form-btn {
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background: #9152f8;
+  background: -webkit-linear-gradient(to bottom, #7579ff, #b224ef);
+  background: -o-linear-gradient(to bottom, #7579ff, #b224ef);
+  background: -moz-linear-gradient(to bottom, #7579ff, #b224ef);
+  background: linear-gradient(to bottom, #7579ff, #b224ef);
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+i.form-icon {
+  color: white;
+  margin: 12px;
+}
+
+i.logo {
+  font-size: 48px;
+}
+
+.login-form-logo {
+  font-size: 60px;
+  color: #333333;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.txt1 {
+  font-size: 13px;
+  color: #e5e5e5;
+  line-height: 1.5;
+}
+
+.login-card-bottom-text {
+  text-align: center !important;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.login-form-error {
+  margin: 0 48px;
+  position: relative;
+  bottom: 20px;
+  color: red;
+  font-size: 14px;
+}
+
+/***************************** Todo App *****************************/
+
+.todo-app-card {
+  width: 40%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+
+.todo-app-container {
+  background: #f0f0f0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.todo-app-title {
+  text-align: center;
+  top: 20%;
+  position: relative;
+  font-size: 3rem;
+  background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.todo-item {
+  padding: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  word-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.todo-item-close-icon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .login-card {
+    width: 33.33%
+  }
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login-card {
+    width: 100%
+  }
+  .todo-app-card {
+    width: 100%;
+  }
+}
